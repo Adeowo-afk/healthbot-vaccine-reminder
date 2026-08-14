@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block content %}
+<div class="hero p-5 rounded-4">
+<span class="badge bg-success-subtle text-success mb-3">Medication + vaccination reminders</span>
+<h1 class="display-5 fw-bold">Never miss an important health reminder.</h1>
+<p class="lead">Create medication and vaccine schedules, then receive email or SMS reminders automatically.</p>
+<a class="btn btn-success btn-lg" href="{% url 'signup' %}">Get started free</a>
+</div>
+<div class="row g-4 mt-4">
+<div class="col-md-4"><div class="card h-100 p-3"><h5>💊 Medication</h5><p>Track name, dose, time and recurrence.</p></div></div>
+<div class="col-md-4"><div class="card h-100 p-3"><h5>💉 Vaccines</h5><p>Schedule one-time or recurring vaccination reminders.</p></div></div>
+<div class="col-md-4"><div class="card h-100 p-3"><h5>🔔 Notifications</h5><p>Send reminders by email, with optional Twilio SMS.</p></div></div>
+</div>
+{% endblock %}

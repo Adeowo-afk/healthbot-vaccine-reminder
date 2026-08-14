@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block content %}
+<div class="row justify-content-center"><div class="col-lg-7"><div class="card p-4">
+<h2 class="fw-bold mb-4">{{ title }}</h2><form method="post">{% csrf_token %}
+{% for field in form %}<div class="mb-3"><label class="form-label">{{ field.label }}</label>{{ field }}{% if field.errors %}<div class="text-danger small">{{ field.errors|striptags }}</div>{% endif %}</div>{% endfor %}
+<button class="btn btn-success">Save reminder</button> <a href="/" class="btn btn-light">Cancel</a>
+</form></div></div></div>
+{% endblock %}
